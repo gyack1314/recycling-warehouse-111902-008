@@ -37,11 +37,14 @@
     "detail_row_budget": 1
   },
   {
-    "id": "stock-complete",
+    "id": "stock-one-site-complete",
     "from": "2026-10-01",
     "through": "2026-10-02",
     "dimensions": [
       "site"
+    ],
+    "site_filter": [
+      "N"
     ],
     "metrics": [
       "stock"

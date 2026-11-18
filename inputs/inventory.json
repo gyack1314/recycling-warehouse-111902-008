@@ -3,7 +3,7 @@
     {
       "path": "actions.json",
       "bytes": 207,
-      "sha256": "8b03b185b73f11dacb76e57e2344e27f4901fcf8ba130162a4d8e4dcdcb36796"
+      "sha256": "7bc99a3b31cd3f13cf2f47701780a1981b56110cc33649e82efa6b25f68aec16"
     },
     {
       "path": "city_day.parquet",
@@ -14,7 +14,7 @@
     {
       "path": "coverage.json",
       "bytes": 809,
-      "sha256": "1a094c422efcc9f927b2d2e780cbfe5262196b70b20dfc71ffa3487a54e0725a"
+      "sha256": "feb58a426ea935b1b2701a13ee8dfd4a4e44d0bb0b4b695834521daba6f9bf44"
     },
     {
       "path": "deliveries.parquet",
@@ -24,8 +24,8 @@
     },
     {
       "path": "queries.json",
-      "bytes": 945,
-      "sha256": "d43102fdd9b751f5de9f8ce82768860dbd3e8ccfbb06f0536ccd1f511d39edec"
+      "bytes": 995,
+      "sha256": "46e5b16033a5be97e2d584ff9795ac6f0c6e20e9f9559a67af7194aceb4b25e2"
     },
     {
       "path": "seed.json",
