@@ -1,0 +1,14 @@
+[
+  {
+    "step": 1,
+    "kind": "switch_mapping",
+    "version": "M2"
+  },
+  {
+    "step": 2,
+    "kind": "publish_city_day",
+    "day": "2026-10-02",
+    "rows": [],
+    "complete": true
+  }
+]

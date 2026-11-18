@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "actions.json",
+      "bytes": 207,
+      "sha256": "8b03b185b73f11dacb76e57e2344e27f4901fcf8ba130162a4d8e4dcdcb36796"
+    },
+    {
+      "path": "city_day.parquet",
+      "bytes": 1636,
+      "sha256": "bd82271f01dda604ff801821b6fbdc00fc45fe9061b597a8d7ce4071fd5d0286",
+      "rows": 1
+    },
+    {
+      "path": "coverage.json",
+      "bytes": 809,
+      "sha256": "1a094c422efcc9f927b2d2e780cbfe5262196b70b20dfc71ffa3487a54e0725a"
+    },
+    {
+      "path": "deliveries.parquet",
+      "bytes": 3695,
+      "sha256": "9c13f0b5b01618ef8c5991d1583835f87593581c77e41a9a119f4fe9cb501d2c",
+      "rows": 4
+    },
+    {
+      "path": "queries.json",
+      "bytes": 945,
+      "sha256": "d43102fdd9b751f5de9f8ce82768860dbd3e8ccfbb06f0536ccd1f511d39edec"
+    },
+    {
+      "path": "seed.json",
+      "bytes": 2299,
+      "sha256": "9c541458914b35b84ebc26c54ad8c07c356c90b41a7800d0ebf1eb06db458660"
+    },
+    {
+      "path": "site_day.parquet",
+      "bytes": 3023,
+      "sha256": "99aa8c310adefeb5b1be332e5907e9730f819fa696b7c8317de2d272f7a933ea",
+      "rows": 3
+    },
+    {
+      "path": "site_map.parquet",
+      "bytes": 1391,
+      "sha256": "e29b1e86eb974d26b76ece39f909ba0d21b05e11c40487eab4ba2ed92441417e",
+      "rows": 4
+    },
+    {
+      "path": "stock.parquet",
+      "bytes": 1910,
+      "sha256": "a0edf2b3d7ac3c5a27f8d50744ccbb3b7cfdd75ec316bc1ec46de01decc72e3d",
+      "rows": 3
+    }
+  ]
+}

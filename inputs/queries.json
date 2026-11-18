@@ -1,0 +1,52 @@
+[
+  {
+    "id": "sum-budget",
+    "from": "2026-10-01",
+    "through": "2026-10-01",
+    "dimensions": [],
+    "metrics": [
+      "weight",
+      "price"
+    ],
+    "map_version": "M1",
+    "detail_row_budget": 0
+  },
+  {
+    "id": "distinct-cross-days",
+    "from": "2026-10-01",
+    "through": "2026-10-03",
+    "dimensions": [],
+    "metrics": [
+      "people"
+    ],
+    "map_version": "M1",
+    "detail_row_budget": 4
+  },
+  {
+    "id": "wrong-map-budget",
+    "from": "2026-10-01",
+    "through": "2026-10-03",
+    "dimensions": [
+      "district"
+    ],
+    "metrics": [
+      "weight",
+      "stock"
+    ],
+    "map_version": "M2",
+    "detail_row_budget": 1
+  },
+  {
+    "id": "stock-complete",
+    "from": "2026-10-01",
+    "through": "2026-10-02",
+    "dimensions": [
+      "site"
+    ],
+    "metrics": [
+      "stock"
+    ],
+    "map_version": "M1",
+    "detail_row_budget": 0
+  }
+]

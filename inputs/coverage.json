@@ -1,0 +1,53 @@
+{
+  "deliveries": {
+    "from": "2026-10-01",
+    "through": "2026-10-03",
+    "complete": true
+  },
+  "site_day": [
+    {
+      "day": "2026-10-01",
+      "sites": [
+        "N",
+        "S"
+      ],
+      "map_version": "M1"
+    },
+    {
+      "day": "2026-10-02",
+      "sites": [
+        "N"
+      ],
+      "map_version": "M1"
+    }
+  ],
+  "city_day": [
+    {
+      "day": "2026-10-01",
+      "map_version": "M1"
+    }
+  ],
+  "stock": [
+    {
+      "day": "2026-10-01",
+      "sites": [
+        "N"
+      ],
+      "map_version": "M1"
+    },
+    {
+      "day": "2026-10-02",
+      "sites": [
+        "N"
+      ],
+      "map_version": "M1"
+    },
+    {
+      "day": "2026-10-03",
+      "sites": [
+        "N"
+      ],
+      "map_version": "M2"
+    }
+  ]
+}
