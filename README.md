@@ -8,4 +8,6 @@
 
 inputs/seed.json与同名Parquet是相同输入的两种载体；inputs/actions.json提供尚未应用的后续资料。docs/input-contract.md解释字段及原有业务约定。materials.physical只校验物理文件，不裁决身份、金额、匹配或有效版本。materials.build_inputs仅重建输入Parquet和物理清单，通常无需运行；不要把其产物误当未来业务结果。
 
-产品输出使用独立目录；原始资料保留供回查。实际入仓及查询入口和针对业务的检查方式需在实现后补充，已有输入检查不替代产品验收。
+查询产品位于querymart包，入口与规则见docs/query-product.md。受限查询执行python -I run_querymart.py query（结果写outputs/restricted/）；无预算明细核对执行python -I run_querymart.py reconcile --query <id>（独立缓存写outputs/reconcile/，受限请求禁用）；compare并排比较汇总复用与明细回退。测试执行python -I run_tests.py。选路在覆盖声明内优先复用同map_version汇总，不满足口径或预算时回合法明细或报缺口，绝不返回估计数；运行时记录真实打开的Parquet与扫描行数，明细预算按DuckDB物理扫描行数执行。
+
+产品输出使用独立目录；原始资料保留供回查。实际入仓及针对业务的检查方式仍需在后续实现，已有输入检查不替代产品验收。

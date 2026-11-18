@@ -1,0 +1,106 @@
+{
+  "mode": "reconcile-only-cache",
+  "query_id": "sum-budget",
+  "request_budget_ignored": 0,
+  "request": {
+    "from": "2026-10-01",
+    "through": "2026-10-01",
+    "dimensions": [],
+    "metrics": [
+      "weight",
+      "price"
+    ],
+    "site_filter": [],
+    "material_filter": [],
+    "map_version": "M1"
+  },
+  "metrics": [
+    {
+      "metric": "weight",
+      "status": "ok",
+      "dimensions": [],
+      "rows": [
+        {
+          "keys": {},
+          "value": "3.000",
+          "unit": "tonne"
+        }
+      ],
+      "gaps": [],
+      "sources": [
+        {
+          "source": "deliveries",
+          "days": [
+            "2026-10-01"
+          ],
+          "sites": [
+            "N",
+            "S"
+          ],
+          "map_version": "M1",
+          "coverage_basis": "无预算核对：deliveries 全量扫描 2026-10-01..2026-10-04；按 map=M1 经 site_map 重关联",
+          "detail_rows_read": 2
+        }
+      ],
+      "mart_versions": [
+        "M1"
+      ]
+    },
+    {
+      "metric": "price",
+      "status": "ok",
+      "dimensions": [],
+      "rows": [
+        {
+          "keys": {},
+          "value": "60.000",
+          "unit": "CNY_minor_per_tonne"
+        }
+      ],
+      "gaps": [],
+      "sources": [
+        {
+          "source": "deliveries",
+          "days": [
+            "2026-10-01"
+          ],
+          "sites": [
+            "N",
+            "S"
+          ],
+          "map_version": "M1",
+          "coverage_basis": "无预算核对：deliveries 全量扫描 2026-10-01..2026-10-04；按 map=M1 经 site_map 重关联",
+          "detail_rows_read": 2
+        }
+      ],
+      "mart_versions": [
+        "M1"
+      ]
+    }
+  ],
+  "runtime": {
+    "statements": [
+      "SELECT version, site, district FROM site_map ORDER BY version, site",
+      "SELECT row, day, site, person, material, weight, amount_minor, CAST(weight AS DECIMAL(18,3)) AS weight_dec FROM deliveries WHERE day BETWEEN '2026-10-01' AND '2026-10-01' AND site IN ('N', 'S') ORDER BY row"
+    ],
+    "scans": [
+      {
+        "source": "site_map",
+        "files_read": 1,
+        "rows_read": 4
+      },
+      {
+        "source": "deliveries",
+        "files_read": 1,
+        "rows_read": 2
+      }
+    ],
+    "files_opened": [
+      "site_map.parquet",
+      "deliveries.parquet"
+    ],
+    "detail_rows_read": 2,
+    "detail_row_budget": -1
+  },
+  "note": "无预算独立核对结果；受限请求不得读取本缓存充当执行结果。"
+}

@@ -1,0 +1,8 @@
+{
+  "query_id": "sum-budget",
+  "restricted_status": "ok",
+  "restricted_detail_rows_read": 0,
+  "reconcile_detail_rows_read": 2,
+  "value_differences": [],
+  "verdict": "一致"
+}

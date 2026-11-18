@@ -1,0 +1,82 @@
+{
+  "query_id": "stock-one-site-complete",
+  "status": "ok",
+  "request": {
+    "from": "2026-10-01",
+    "through": "2026-10-02",
+    "dimensions": [
+      "site"
+    ],
+    "metrics": [
+      "stock"
+    ],
+    "site_filter": [
+      "N"
+    ],
+    "material_filter": [],
+    "map_version": "M1",
+    "detail_row_budget": 0
+  },
+  "metrics": [
+    {
+      "metric": "stock",
+      "status": "ok",
+      "dimensions": [
+        "site"
+      ],
+      "rows": [
+        {
+          "keys": {
+            "site": "N"
+          },
+          "value": "8.000",
+          "unit": "tonne_closing",
+          "as_of_day": "2026-10-02"
+        }
+      ],
+      "gaps": [],
+      "sources": [
+        {
+          "source": "stock",
+          "days": [
+            "2026-10-02"
+          ],
+          "sites": [
+            "N"
+          ],
+          "map_version": "M1",
+          "coverage_basis": "coverage.json stock day=2026-10-02 map=M1；请求期间最后一个同口径完整业务日",
+          "detail_rows_read": 0
+        }
+      ],
+      "mart_versions": [
+        "M1"
+      ]
+    }
+  ],
+  "runtime": {
+    "statements": [
+      "SELECT version, site, district FROM site_map ORDER BY version, site",
+      "SELECT closing FROM stock WHERE day = '2026-10-02' AND map_version = 'M1' AND site = 'N'"
+    ],
+    "scans": [
+      {
+        "source": "site_map",
+        "files_read": 1,
+        "rows_read": 4
+      },
+      {
+        "source": "stock",
+        "files_read": 1,
+        "rows_read": 1
+      }
+    ],
+    "files_opened": [
+      "site_map.parquet",
+      "stock.parquet"
+    ],
+    "detail_rows_read": 0,
+    "detail_row_budget": 0
+  },
+  "coverage_reference": "inputs/coverage.json（声明区间内零行为合法空覆盖；未声明日期不视为空）"
+}

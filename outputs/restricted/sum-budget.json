@@ -1,0 +1,106 @@
+{
+  "query_id": "sum-budget",
+  "status": "ok",
+  "request": {
+    "from": "2026-10-01",
+    "through": "2026-10-01",
+    "dimensions": [],
+    "metrics": [
+      "weight",
+      "price"
+    ],
+    "site_filter": [],
+    "material_filter": [],
+    "map_version": "M1",
+    "detail_row_budget": 0
+  },
+  "metrics": [
+    {
+      "metric": "weight",
+      "status": "ok",
+      "dimensions": [],
+      "rows": [
+        {
+          "keys": {},
+          "value": "3.000",
+          "unit": "tonne"
+        }
+      ],
+      "gaps": [],
+      "sources": [
+        {
+          "source": "city_day",
+          "days": [
+            "2026-10-01"
+          ],
+          "sites": [
+            "N",
+            "S"
+          ],
+          "map_version": "M1",
+          "coverage_basis": "coverage.json city_day 2026-10-01..2026-10-01 map=M1（整市口径）",
+          "detail_rows_read": 0
+        }
+      ],
+      "mart_versions": [
+        "M1"
+      ]
+    },
+    {
+      "metric": "price",
+      "status": "ok",
+      "dimensions": [],
+      "rows": [
+        {
+          "keys": {},
+          "value": "60.000",
+          "unit": "CNY_minor_per_tonne"
+        }
+      ],
+      "gaps": [],
+      "sources": [
+        {
+          "source": "city_day",
+          "days": [
+            "2026-10-01"
+          ],
+          "sites": [
+            "N",
+            "S"
+          ],
+          "map_version": "M1",
+          "coverage_basis": "coverage.json city_day 2026-10-01..2026-10-01 map=M1（整市口径）",
+          "detail_rows_read": 0
+        }
+      ],
+      "mart_versions": [
+        "M1"
+      ]
+    }
+  ],
+  "runtime": {
+    "statements": [
+      "SELECT version, site, district FROM site_map ORDER BY version, site",
+      "SELECT day, CAST(weight_sum AS DECIMAL(18,3)) AS wd, amount_sum FROM city_day WHERE day BETWEEN '2026-10-01' AND '2026-10-01' AND map_version = 'M1'"
+    ],
+    "scans": [
+      {
+        "source": "site_map",
+        "files_read": 1,
+        "rows_read": 4
+      },
+      {
+        "source": "city_day",
+        "files_read": 1,
+        "rows_read": 1
+      }
+    ],
+    "files_opened": [
+      "site_map.parquet",
+      "city_day.parquet"
+    ],
+    "detail_rows_read": 0,
+    "detail_row_budget": 0
+  },
+  "coverage_reference": "inputs/coverage.json（声明区间内零行为合法空覆盖；未声明日期不视为空）"
+}

@@ -4,4 +4,4 @@ COPY requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 COPY . /app
 ENV PYTHONDONTWRITEBYTECODE=1
-CMD ["python", "-m", "materials", "inputs"]
+CMD ["python", "-I", "run_querymart.py", "query"]
